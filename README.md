@@ -7,4 +7,4 @@ This repo also serves the app's update check through GitHub Pages:
 - `versions.json`: the newest release of each major version, e.g. `{"versions": ["1.4.2", "2.0.1"]}`. The app compares it with its own version and offers the download page when a newer one is out. Update it when you publish a release.
 - `index.html`: the download page the app opens.
 
-The app reads `https://clearmediaukltd.github.io/budgetcoin-releases/versions.json`. If a custom domain is added later, GitHub redirects the old address, so copies already installed keep working.
+The app reads `https://getbudgetcoin.com/versions.json`; `getbudgetcoin.com` is this site's custom domain (the `CNAME` file). Keep that domain pointing at whichever host serves this file.
