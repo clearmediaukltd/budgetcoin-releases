@@ -53,10 +53,10 @@
     <h1>Contacto</h1>
     <p>¿Dudas sobre BudgetCoin o tu licencia, o has encontrado un problema? Escríbenos y te responderemos por correo.</p>
 
-    <form class="contact-form" id="contact" action="#" method="POST">
+    <form class="contact-form" id="contact" action="https://formspree.io/f/xvkavree" method="POST">
       
       <input type="hidden" name="language" value="es">
-      <input type="hidden" name="subject" id="contact-subject" value="BudgetCoin">
+      <input type="hidden" name="_subject" id="contact-subject" value="BudgetCoin">
       <!-- Spam trap: people never see or fill these. -->
       <div class="trap" aria-hidden="true">
         <label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
@@ -88,8 +88,8 @@
         <textarea id="c-message" name="message" rows="7" required maxlength="10000"></textarea>
       </div>
       <p class="hint">Usamos tu nombre y correo solo para responderte. <a href="../privacy/">Privacidad</a></p>
-      <p class="form-status">El formulario de contacto estará disponible pronto.</p>
-      <button class="btn btn-dark" type="submit" id="c-send" disabled>Enviar mensaje</button>
+      
+      <button class="btn btn-dark" type="submit" id="c-send">Enviar mensaje</button>
       <p class="form-status" id="c-status" role="status" aria-live="polite"></p>
     </form>
   </div>
