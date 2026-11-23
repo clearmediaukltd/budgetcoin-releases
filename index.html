@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BudgetCoin: envelope budgeting you buy once</title>
-<meta name="description" content="Envelope budgeting for Mac, Windows and Linux, with accounts in any currency. Your budgets stay on your computer. One payment, no subscription.">
+<meta name="description" content="Envelope budgeting for Mac and Windows, with accounts in any currency. Your budgets stay on your computer. One payment, no subscription.">
 <link rel="canonical" href="https://getbudgetcoin.com/">
 <link rel="alternate" hreflang="en" href="https://getbudgetcoin.com/">
 <link rel="alternate" hreflang="de" href="https://getbudgetcoin.com/de/">
@@ -41,6 +41,7 @@
           <li class="hide-sm"><a href="./#features">Features</a></li>
           <li class="hide-sm"><a href="./#pricing">Pricing</a></li>
           <li class="hide-sm"><a href="help/">Help</a></li>
+          <li class="hide-sm"><a href="./contact/">Contact</a></li>
           <li>
             <details class="lang-menu">
               <summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>EN</summary>
@@ -59,7 +60,7 @@
     <div>
       <p class="tagline">Every coin, on purpose.</p>
       <h1>Envelope budgeting you <em>buy once.</em></h1>
-      <p class="lede">Decide what your money is for before you spend it, in any currency. BudgetCoin runs on your Mac, Windows or Linux computer and keeps your budgets there.</p>
+      <p class="lede">Decide what your money is for before you spend it, in any currency. BudgetCoin runs on your Mac or Windows computer and keeps your budgets there.</p>
       <div class="actions">
         <a class="btn btn-gold" href="#download">Download free trial</a>
         <a class="btn btn-ghost" href="#pricing">Pricing</a>
@@ -309,12 +310,6 @@
           <span>Apple silicon and Intel</span>
 <span class="btn btn-dark btn-soon" aria-disabled="true">Coming soon</span>
         </li>
-        <li data-os="linux">
-          <svg class="os" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 17l6-5-6-5M12 19h8"/></svg>
-          <strong>Linux</strong>
-          <span>64-bit, most distributions</span>
-<span class="btn btn-dark btn-soon" aria-disabled="true">Coming soon</span>
-        </li>
       </ul>
       
     </div>
@@ -353,10 +348,10 @@
     <a class="brand" href="./"><img src="logo.svg" alt="">BudgetCoin</a>
     <ul>
       <li><a href="help/">User guide</a></li>
-      <li><a href="help/privacy-security.html">Privacy</a></li>
+      <li><a href="./privacy/">Privacy</a></li>
       <li><a href="./terms/">Terms of sale</a></li>
       <li><a href="help/licence-agreement.html">Licence agreement</a></li>
-      <!-- CONTACT: add a mailto link once the address is decided. -->
+      <li><a href="./contact/">Contact</a></li>
       <li>© 2026 BudgetCoin</li>
     </ul>
   </div>
@@ -367,7 +362,7 @@
   (function () {
     var p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
     var ua = navigator.userAgent;
-    var os = /Win/i.test(p) ? "windows" : /Mac/i.test(p) || /Mac OS/.test(ua) ? "mac" : /Linux|X11/i.test(p + ua) && !/Android/i.test(ua) ? "linux" : null;
+    var os = /Win/i.test(p) ? "windows" : /Mac/i.test(p) || /Mac OS/.test(ua) ? "mac" : null;
     var li = os && document.querySelector('.platforms [data-os="' + os + '"]');
     if (li) { li.dataset.yours = li.parentNode.dataset.yours; li.classList.add("yours"); li.parentNode.prepend(li); }
     // Remember a language picked from the menu, so the root page stops redirecting.

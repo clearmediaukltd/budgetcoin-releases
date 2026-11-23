@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BudgetCoin: Umschlag-Budgetierung, einmal bezahlt</title>
-<meta name="description" content="Umschlag-Budgetierung für Mac, Windows und Linux, mit Konten in jeder Währung. Ihre Budgets bleiben auf Ihrem Computer. Einmal bezahlen, kein Abo.">
+<meta name="description" content="Umschlag-Budgetierung für Mac und Windows, mit Konten in jeder Währung. Ihre Budgets bleiben auf Ihrem Computer. Einmal bezahlen, kein Abo.">
 <link rel="canonical" href="https://getbudgetcoin.com/de/terms/">
 <link rel="alternate" hreflang="en" href="https://getbudgetcoin.com/terms/">
 <link rel="alternate" hreflang="de" href="https://getbudgetcoin.com/de/terms/">
@@ -33,6 +33,7 @@
           <li class="hide-sm"><a href="../#features">Funktionen</a></li>
           <li class="hide-sm"><a href="../#pricing">Preis</a></li>
           <li class="hide-sm"><a href="../../help/">Hilfe</a></li>
+          <li class="hide-sm"><a href="../contact/">Kontakt</a></li>
           <li>
             <details class="lang-menu">
               <summary aria-label="Sprache"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>DE</summary>
@@ -84,10 +85,10 @@
     <a class="brand" href="../"><img src="../../logo.svg" alt="">BudgetCoin</a>
     <ul>
       <li><a href="../../help/">Benutzerhandbuch (Englisch)</a></li>
-      <li><a href="../../help/privacy-security.html">Datenschutz</a></li>
+      <li><a href="../privacy/">Datenschutz</a></li>
       <li><a href="../terms/">Verkaufsbedingungen</a></li>
       <li><a href="../../help/licence-agreement.html">Lizenzvereinbarung (Englisch)</a></li>
-      <!-- CONTACT: add a mailto link once the address is decided. -->
+      <li><a href="../contact/">Kontakt</a></li>
       <li>© 2026 BudgetCoin</li>
     </ul>
   </div>
@@ -98,7 +99,7 @@
   (function () {
     var p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
     var ua = navigator.userAgent;
-    var os = /Win/i.test(p) ? "windows" : /Mac/i.test(p) || /Mac OS/.test(ua) ? "mac" : /Linux|X11/i.test(p + ua) && !/Android/i.test(ua) ? "linux" : null;
+    var os = /Win/i.test(p) ? "windows" : /Mac/i.test(p) || /Mac OS/.test(ua) ? "mac" : null;
     var li = os && document.querySelector('.platforms [data-os="' + os + '"]');
     if (li) { li.dataset.yours = li.parentNode.dataset.yours; li.classList.add("yours"); li.parentNode.prepend(li); }
     // Remember a language picked from the menu, so the root page stops redirecting.

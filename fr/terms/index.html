@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BudgetCoin : le budget par enveloppes, payé une seule fois</title>
-<meta name="description" content="Budget par enveloppes pour Mac, Windows et Linux, avec des comptes dans toutes les devises. Vos budgets restent sur votre ordinateur. Un seul paiement, sans abonnement.">
+<meta name="description" content="Budget par enveloppes pour Mac et Windows, avec des comptes dans toutes les devises. Vos budgets restent sur votre ordinateur. Un seul paiement, sans abonnement.">
 <link rel="canonical" href="https://getbudgetcoin.com/fr/terms/">
 <link rel="alternate" hreflang="en" href="https://getbudgetcoin.com/terms/">
 <link rel="alternate" hreflang="de" href="https://getbudgetcoin.com/de/terms/">
@@ -33,6 +33,7 @@
           <li class="hide-sm"><a href="../#features">Fonctions</a></li>
           <li class="hide-sm"><a href="../#pricing">Prix</a></li>
           <li class="hide-sm"><a href="../../help/">Aide</a></li>
+          <li class="hide-sm"><a href="../contact/">Contact</a></li>
           <li>
             <details class="lang-menu">
               <summary aria-label="Langue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>FR</summary>
@@ -84,10 +85,10 @@
     <a class="brand" href="../"><img src="../../logo.svg" alt="">BudgetCoin</a>
     <ul>
       <li><a href="../../help/">Guide d'utilisation (en anglais)</a></li>
-      <li><a href="../../help/privacy-security.html">Confidentialité</a></li>
+      <li><a href="../privacy/">Confidentialité</a></li>
       <li><a href="../terms/">Conditions de vente</a></li>
       <li><a href="../../help/licence-agreement.html">Contrat de licence (en anglais)</a></li>
-      <!-- CONTACT: add a mailto link once the address is decided. -->
+      <li><a href="../contact/">Contact</a></li>
       <li>© 2026 BudgetCoin</li>
     </ul>
   </div>
@@ -98,7 +99,7 @@
   (function () {
     var p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
     var ua = navigator.userAgent;
-    var os = /Win/i.test(p) ? "windows" : /Mac/i.test(p) || /Mac OS/.test(ua) ? "mac" : /Linux|X11/i.test(p + ua) && !/Android/i.test(ua) ? "linux" : null;
+    var os = /Win/i.test(p) ? "windows" : /Mac/i.test(p) || /Mac OS/.test(ua) ? "mac" : null;
     var li = os && document.querySelector('.platforms [data-os="' + os + '"]');
     if (li) { li.dataset.yours = li.parentNode.dataset.yours; li.classList.add("yours"); li.parentNode.prepend(li); }
     // Remember a language picked from the menu, so the root page stops redirecting.
