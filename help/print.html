@@ -41,8 +41,63 @@
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-ca20d79d.js"></script>
+        <!-- getbudgetcoin.com: the site header above the guide (website build only). -->
+        <style>
+            :root { --bc-head-h: 64px; }
+            body { padding-top: var(--bc-head-h); }
+            #mdbook-sidebar { top: var(--bc-head-h) !important; }
+            #mdbook-menu-bar.sticky, #mdbook-menu-bar-hover-placeholder:hover + #mdbook-menu-bar,
+            #mdbook-menu-bar:hover, html.sidebar-visible #mdbook-menu-bar, #mdbook-menu-bar-hover-placeholder { top: var(--bc-head-h) !important; }
+            .bc-top { position: fixed; top: 0; left: 0; right: 0; height: var(--bc-head-h); z-index: 200;
+              background: linear-gradient(160deg, #0b1a24, #10283a); color: #fff;
+              font: 15px/1.4 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+            .bc-top .site-head .wrap { max-width: none; margin: 0; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: var(--bc-head-h); }
+            .bc-top a { text-decoration: none; }
+            .bc-top .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; color: #fff; letter-spacing: -0.02em; }
+            .bc-top .brand img { width: 30px; height: 30px; }
+            .bc-top ul { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; }
+            .bc-top nav a { color: rgba(255,255,255,.78); font-weight: 600; }
+            .bc-top nav a:hover, .bc-top nav a[aria-current] { color: #fff; }
+            .bc-top nav .nav-cta { color: #2a1a00; background: #f7c84d; padding: 7px 16px; border-radius: 999px; }
+            .bc-top :focus-visible { outline: 3px solid #2dd4bf; outline-offset: 3px; border-radius: 6px; }
+            .bc-top .lang-menu { position: relative; }
+            .bc-top .lang-menu summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,.78); font-weight: 600; }
+            .bc-top .lang-menu summary::-webkit-details-marker { display: none; }
+            .bc-top .lang-menu summary svg { width: 18px; height: 18px; }
+            .bc-top .lang-menu ul { position: absolute; right: 0; top: calc(100% + 8px); display: block; min-width: 170px; background: #fff; border-radius: 12px; padding: 6px; box-shadow: 0 20px 40px -12px rgba(0,0,0,.5); }
+            .bc-top .lang-menu li a { display: block; padding: 8px 12px; border-radius: 8px; color: #14181f; font-weight: 500; }
+            .bc-top .lang-menu li a:hover { background: #eef7f5; }
+            .bc-top .lang-menu li a[aria-current] { font-weight: 800; color: #0e7490; }
+            @media (max-width: 900px) { .bc-top .hide-sm { display: none; } }
+        </style>
     </head>
     <body>
+    <div class="bc-top">
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../logo.svg" alt="">BudgetCoin</a>
+      <nav aria-label="Main">
+        <ul>
+          <li class="hide-sm"><a href="../#how">How it works</a></li>
+          <li class="hide-sm"><a href="../#currencies">Currencies</a></li>
+          <li class="hide-sm"><a href="../#features">Features</a></li>
+          <li class="hide-sm"><a href="../#pricing">Pricing</a></li>
+          <li class="hide-sm"><a href="" aria-current="page">Help</a></li>
+          <li class="hide-sm"><a href="../contact/">Contact</a></li>
+          <li>
+            <details class="lang-menu">
+              <summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>EN</summary>
+              <ul><li><a href="../" hreflang="en" lang="en" aria-current="true">English</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="../pt/" hreflang="pt" lang="pt">Português</a></li></ul>
+            </details>
+          </li>
+          
+          <li><a class="nav-cta" href="../#download">Download</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    </div>
     <div id="mdbook-help-container">
         <div id="mdbook-help-popup">
             <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
