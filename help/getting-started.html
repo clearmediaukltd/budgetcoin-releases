@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Your first budget - BudgetCoin User Guide</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/custom-79f68ce5.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-7afca0a7.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-ca20d79d.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">BudgetCoin User Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="your-first-budget"><a class="header" href="#your-first-budget">Your first budget</a></h1>
+<p>When you open the app you’ll see the <strong>Welcome</strong> screen. It lists your budgets, most recently opened first: the ones in your budgets folder plus any you’ve opened from somewhere else (shown with their folder name). Choose a card to open it, or <strong>New budget</strong> to create one. If a file has moved or been deleted, its card says <strong>File not found</strong>, and its <strong>×</strong> takes it off the list.</p>
+<h2 id="choose-the-apps-language"><a class="header" href="#choose-the-apps-language">Choose the app’s language</a></h2>
+<p>The language button is in the top-right corner of the Welcome screen. It shows the current language’s flag and name. Choose it to pick another language. The app remembers your choice on this computer. Until you choose, it uses your computer’s language if the app has it, and English otherwise.</p>
+<p>The app is available in English, Dutch (Nederlands), French (Français), German (Deutsch), Italian (Italiano), Portuguese (Português) and Spanish (Español). A computer set to one of these languages starts in it, whatever the region (for example Canada, Belgium, Mexico, Austria or Switzerland). Portuguese uses Brazilian wording, and Portugal also gets it. This user guide is in English only for now.</p>
+<h2 id="try-the-sample-budget"><a class="header" href="#try-the-sample-budget">Try the sample budget</a></h2>
+<p>Choose <strong>Try a sample budget</strong> to explore before setting up your own. It creates a budget called “Sample budget” with three months of example activity ending today: a current account, savings, a credit card and a pension, bills and everyday categories, a split transaction and a flagged one. It uses your computer’s currency and formats.</p>
+<p>The sample is an ordinary budget. Change anything you like, and delete it when you’re done (see <a href="#delete-a-budget">Delete a budget</a>). Choosing <strong>Try a sample budget</strong> again reopens the same sample, with any changes you made. To start the sample afresh, delete it and try it again. The example names are in English for now.</p>
+<h2 id="create-a-budget"><a class="header" href="#create-a-budget">Create a budget</a></h2>
+<ol>
+<li>Choose <strong>Create a new budget</strong>.</li>
+<li>Give it a name, for example “Household”.</li>
+<li>Check the <strong>currency</strong>, <strong>date format</strong> and <strong>number format</strong>. They’re filled in from your computer’s region settings. The <strong>Preview</strong> line shows how dates and amounts will look. These settings are stored inside the budget, so it looks the same on any computer.</li>
+<li>Optionally tick <strong>Protect this budget with a password</strong>. The file is then encrypted (see <a href="privacy-security.html">Privacy &amp; security</a>).</li>
+<li>Choose <strong>Create budget</strong>.</li>
+</ol>
+<p>If you set a password, the app shows your <strong>recovery key</strong> once. It’s the only way to open the budget if you forget the password. Copy it into a password manager or write it down, tick the box to confirm, then continue.</p>
+<p>When the budget opens, the <strong>setup tour</strong> starts (see below).</p>
+<p>Budgets are saved in a <strong>BudgetCoin</strong> folder in your Documents folder. There is no Save button: changes are saved automatically a moment after you make them. If saving ever fails, a message appears at the top of the window.</p>
+<h2 id="the-setup-tour"><a class="header" href="#the-setup-tour">The setup tour</a></h2>
+<p>A new budget starts with a short tour that shows you, one step at a time, how to set it up. Each step moves on by itself once you’ve done what it asks; the last one just shows you around. The rest of the window dims, a ring highlights the control to use, and a large tip beside it explains what to do:</p>
+<ol>
+<li><strong>Add your first account.</strong> Choose <strong>Add account</strong> in the sidebar. The tour moves on by itself once the account is saved.</li>
+<li><strong>Start with a group.</strong> Open the <strong>⋯</strong> menu at the top of the Category column, choose <strong>Add group</strong> and give it a name, such as “Bills”. The tour moves on by itself once the group is added.</li>
+<li><strong>Add categories to your group.</strong> Choose <strong>＋</strong> at the end of the group’s row and type a name. The tour moves on once it’s added. You can add more categories and groups any time.</li>
+<li><strong>Assign all your money.</strong> Type amounts into <strong>Assigned</strong>. The tip shows how much is still to assign, and the tour moves on when it reaches zero. (If there’s nothing to assign, choose <strong>Next</strong>.)</li>
+<li><strong>Record money in and out.</strong> The tour opens your account so you can enter a transaction. When you’re paid, enter it as an <strong>Inflow</strong> with the category <strong>Income for this month</strong>: it goes into Ready to Assign. (The balance you entered in step 1 is already there, so don’t enter this month’s pay again.) The tour moves on once you’ve entered a transaction.</li>
+<li><strong>See your budget.</strong> The tour goes back to the budget and highlights the <strong>Available</strong> amount of the category you just spent from. Choose <strong>Finish</strong> to end the tour.</li>
+</ol>
+<p>The tour only points the way. Everything you do during it is a normal change, so <strong>Undo</strong> works as usual. You can click anywhere in the window while the tour is showing; if you wander off, choose <strong>Show me</strong> to go back to the step.</p>
+<p>Choose <strong>Skip tour</strong> (or press <strong>Esc</strong> while the tip has focus) to close it. If you quit part-way, the tour carries on from the same step next time you open the budget. To take it again any time, go to <strong>Help</strong> and choose <strong>Take the setup tour</strong>. The sample budget doesn’t start the tour.</p>
+<h2 id="add-your-accounts"><a class="header" href="#add-your-accounts">Add your accounts</a></h2>
+<p>Choose <strong>Add account</strong> in the sidebar. Give the account a name, pick its type and enter its <strong>current balance</strong> and the date of that balance. For a credit card or loan, enter what you owe as a negative amount by typing a minus sign first (for example <code>-25000</code> for −£250.00). You can type sums here too (see <a href="reference/amount-maths.html">Typing amounts and sums</a>).</p>
+<ul>
+<li><strong>Budget accounts</strong> (current, savings, cash, credit cards) count towards <strong>Ready to Assign</strong>.</li>
+<li><strong>Tracking accounts</strong> (investments, property, loans) only show a balance. Untick <strong>On budget</strong> to make any account a tracking account.</li>
+</ul>
+<p>To record spending and income, select the account in the sidebar. See <a href="how-to/transactions.html">Entering transactions</a>.</p>
+<p><strong>Credit cards</strong> work like your other budget accounts:</p>
+<ul>
+<li>Spending on the card comes out of its category, just like paying cash.</li>
+<li>Paying the card off is a transfer from your current account (choose <strong>Transfer: <em>card name</em></strong> as the category). It doesn’t change your budget: the money already left your categories when you spent it.</li>
+<li>Debt the card had when you added it is money you’ve already spent, so it comes out of <strong>Ready to Assign</strong>. If that makes Ready to Assign negative, take money back from some categories until you’ve caught up.</li>
+<li>If you overspend a category on the card, it’s treated like any other overspending (see below).</li>
+</ul>
+<p><strong>Close or delete an account.</strong> At the top of an account, choose <strong>⋯</strong> (Account actions) next to its type. <strong>Close account</strong> takes it off the sidebar’s main list but keeps its history (find it under <strong>Closed accounts</strong>; it needs a zero balance). <strong>Delete account…</strong> removes the account and all its transactions, after telling you how many. Transfers to other accounts aren’t lost: they stay in those accounts as ordinary transactions marked <strong>Needs a category</strong>, so their balances don’t change. <strong>Undo</strong> brings a deleted account back.</p>
+<h2 id="add-groups-and-categories"><a class="header" href="#add-groups-and-categories">Add groups and categories</a></h2>
+<p>Categories are what your money is for, like “Rent” or “Groceries”. Groups keep related categories together, like “Bills” or “Everyday”.</p>
+<ul>
+<li>Open the <strong>⋯</strong> menu at the top of the Category column (on the same line as <strong>Collapse all</strong>) and choose <strong>Add group</strong>. A new row appears after your last group: type a name and press <strong>Enter</strong>, or click away to add it. <strong>Esc</strong> cancels.</li>
+<li>Point at a group’s row (or move to it with the keyboard) and choose <strong>＋</strong> at the end of its name to add a category to it.</li>
+<li>Select a group’s or category’s name to <strong>rename</strong>, <strong>hide</strong> or <strong>delete</strong> it. Hidden categories keep their money and still count towards your totals; they’re just out of the way. To see them again, choose <strong>Show hidden categories</strong> in the <strong>⋯</strong> menu (it shows how many are hidden, and a tick while they are shown), then select one and choose <strong>Show again</strong>.</li>
+<li><strong>Deleting a category</strong> that has transactions or assigned money asks you to choose another category to move them to; assigned amounts are added to that category’s, month by month, so Ready to Assign doesn’t change. A group can be deleted once it’s empty. <strong>Undo</strong> reverses any delete.</li>
+</ul>
+<h2 id="arrange-your-budget"><a class="header" href="#arrange-your-budget">Arrange your budget</a></h2>
+<ul>
+<li><strong>Reorder categories:</strong> drag a category’s name up or down. Drop it in another group to move it there, or onto a group’s row to make it that group’s first category. Only its place changes, never its money.</li>
+<li><strong>Reorder groups:</strong> drag a group by its name.</li>
+<li><strong>From the keyboard:</strong> select a name with Tab, then press <strong>⌥↑ / ⌥↓</strong> (<strong>Alt+↑ / Alt+↓</strong> on Windows) to move it one place. A category at the top or bottom of its group moves into the next group.</li>
+<li><strong>Collapse a group</strong> with the arrow before its name to hide its categories; select it again to expand. <strong>Collapse all</strong> / <strong>Expand all</strong>, just above the first group, (or <strong>⌥-click</strong>, Alt-click, on any group’s arrow) does every group at once. Each group’s row always shows its totals for every month (assigned, activity and available, including hidden categories), so a collapsed group still shows its money. The budget remembers which groups are collapsed.</li>
+<li><strong>Reorder accounts</strong> in the sidebar the same way: drag an account, or use <strong>⌥↑ / ⌥↓</strong>. Accounts move within their own list (budget or tracking).</li>
+<li><strong>Collapse the sidebar’s lists</strong> by selecting <strong>Budget accounts</strong> or <strong>Tracking accounts</strong>. This computer remembers which are collapsed.</li>
+<li><strong>Widen the sidebar</strong> by dragging its right edge (or focus the edge and use ← / →) so long account names fit; double-click the edge for the standard width. Hover over a name to see it in full.</li>
+<li>Reordering can be undone like any other change.</li>
+</ul>
+<h2 id="assign-your-money"><a class="header" href="#assign-your-money">Assign your money</a></h2>
+<p>The top of each month shows <strong>Ready to Assign</strong>: money you have that hasn’t been assigned to a category yet. Select a category’s <strong>Assigned</strong> amount, type how much to give it, and press <strong>Enter</strong>. Ready to Assign goes down as you assign. Aim for zero. If it goes below zero the header says <strong>Overassigned</strong> and you should take money back from a category.</p>
+<p>Below it, the header shows how that figure adds up:</p>
+<ul>
+<li><strong>Left over from</strong> last month: money that wasn’t assigned last month.</li>
+<li><strong>Income for</strong> this month: income marked <em>Income for this month</em> this month, plus anything marked <em>Income for next month</em> last month.</li>
+<li><strong>Overspent in</strong> last month: cash spending that went over a category’s budget comes out of this month.</li>
+<li><strong>Assigned in</strong> this month: money you’ve assigned to categories this month.</li>
+</ul>
+<p>Money you assign in a later month doesn’t change this month’s Ready to Assign: it comes out of that later month’s. If you plan ahead further than your money goes, the later month shows <strong>Overassigned</strong>.</p>
+<p>If you’ve marked income as <em>Income for next month</em>, an <strong>Income held for</strong> line shows how much is waiting for next month. It’s in your accounts but not yet in Ready to Assign. In 6-month view, point at Ready to Assign to see the same breakdown.</p>
+<p>The <strong>Available</strong> column shows what’s left in each category. A negative amount, shown in orange, means the category is overspent. Assign more to it, or it comes out of next month’s Ready to Assign (see <a href="how-to/overspending.html">Overspending</a>).</p>
+<h2 id="auto-assign-a-month"><a class="header" href="#auto-assign-a-month">Auto-assign a month</a></h2>
+<p>Instead of filling in every category by hand, choose <strong>Auto-assign</strong> next to a month’s name. Each option shows how much it would assign and how many categories it changes:</p>
+<ul>
+<li><strong>Assigned last month</strong> or <strong>Spent last month</strong>: repeat last month.</li>
+<li><strong>Average assigned</strong> or <strong>Average spent</strong>: the average over the last 3, 6 or 12 months (choose in the menu).</li>
+<li><strong>Reset available to zero</strong>: takes back money sitting unspent in categories, returning it to Ready to Assign.</li>
+<li><strong>Reset assigned to zero</strong>: clears the month’s assignments.</li>
+</ul>
+<p>It applies to every visible category, as one step: <strong>Undo</strong> reverses the whole thing.</p>
+<h2 id="move-money-between-categories"><a class="header" href="#move-money-between-categories">Move money between categories</a></h2>
+<p>Plans change. To move money, change the <strong>Assigned</strong> amounts: lower the category you’re taking it from and raise the one it goes to. You can type a sum, such as <strong>-50</strong> to take £50 off what’s there or <strong>+50</strong> to add it (see <a href="reference/amount-maths.html">Typing amounts and sums</a>). Lowering a category without raising another puts the money back in <strong>Ready to Assign</strong>.</p>
+<h2 id="see-what-makes-up-a-categorys-activity"><a class="header" href="#see-what-makes-up-a-categorys-activity">See what makes up a category’s activity</a></h2>
+<p>Select a category’s <strong>Activity</strong> amount (underlined) to see the transactions behind it that month, newest first: date, payee, account and amount. For a split transaction, only the part that went to this category is shown, marked <strong>Split</strong>. The <strong>Total</strong> at the bottom is always the same as the Activity amount. Press <strong>Esc</strong> or click elsewhere to close the list.</p>
+<p>Choose <strong>Show in All accounts</strong> to open those transactions in the <strong>All accounts</strong> register, where you can change, search or export them (see <a href="how-to/search.html#a-category-from-the-budget">Searching and filtering</a>).</p>
+<p>Use the arrows next to the month name (or ⌘[ and ⌘], Ctrl+[ and Ctrl+] on Windows and Linux) to move between months, and <strong>1 month / 2 months / 3 months / 6 months</strong> to choose how many to see at once. With <strong>6 months</strong>, each month shows a compact column: the assigned amount (select it to change it) next to what’s available. Point at a cell to see its activity, or switch back to 3 months or fewer for the full Assigned, Activity and Available columns. Under each column heading is that month’s total for the column (in 6-month view, total assigned · total available). In 6-month view, the ✦ button next to each month opens <strong>Auto-assign</strong>. <strong>Undo</strong> and <strong>Redo</strong> work for every change until you close the budget (or it locks). Closing clears the undo history, so a budget you open again starts with nothing to undo.</p>
+<p>The current month is outlined in blue and tagged <strong>This month</strong>. Earlier months are greyed and tagged <strong>Completed</strong>, but you can still change them. Later months are tagged <strong>Planning</strong>.</p>
+<h2 id="open-and-exit-budgets"><a class="header" href="#open-and-exit-budgets">Open and exit budgets</a></h2>
+<p>Choose <strong>Exit budget</strong> in the top bar to go back to the Welcome screen, then pick another budget from the list. A password-protected budget asks for its password. If you’ve forgotten it, choose <strong>Use my recovery key instead</strong>.</p>
+<p>If the app closed before your last changes were saved, they’re recovered the next time you open the budget.</p>
+<h2 id="delete-a-budget"><a class="header" href="#delete-a-budget">Delete a budget</a></h2>
+<p>On the Welcome screen, point at a budget and choose the bin icon. Inside a budget, go to <strong>Settings → General</strong> and choose <strong>Delete budget…</strong> at the bottom.</p>
+<p>To confirm, type the budget’s name exactly. A password-protected budget also asks for its password (or tick <strong>Use the recovery key instead</strong>). The file then moves to the Trash (the Recycle Bin on Windows), so you can still restore it from there. Restored files show up on the Welcome screen again.</p>
+<p>A budget on a network drive or some USB drives can’t go to the Trash: there it’s deleted for good. Copies you’ve exported or backed up elsewhere are never touched.</p>
+<p>For a budget stored outside your budgets folder, the same dialog offers <strong>Just remove from this list</strong>, which forgets the budget but leaves the file alone. A budget whose file can’t be found shows <strong>×</strong> instead, which only removes it from the list.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="concepts/envelope-method.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="concepts/envelope-method.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

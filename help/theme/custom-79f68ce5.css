@@ -1,0 +1,6 @@
+/* Match the app: same type and accent colour. */
+:root { --app-accent: #2f5bea; }
+html { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.light, .rust { --links: var(--app-accent); --sidebar-active: var(--app-accent); }
+.navy, .coal, .ayu { --links: #8fb0ff; --sidebar-active: #8fb0ff; }
+.content main { max-width: 760px; }
