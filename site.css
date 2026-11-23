@@ -272,3 +272,17 @@ section { padding: 110px 0; }
 .btn-soon { cursor: default; opacity: .7; }
 .btn-soon:hover { transform: none; }
 .platforms li.yours .btn-soon { background: var(--ink); color: #fff; }
+
+/* Price card note, document pages */
+.price-card .final { margin: 16px 0 0; font-size: 14px; color: #6b4e10; }
+.price-card .final a { color: #6b4e10; font-weight: 700; }
+.hero-slim .site-head { padding-bottom: 4px; }
+.doc { padding: 64px 0 96px; }
+.doc-wrap { max-width: 760px; }
+.doc h1 { font-size: clamp(36px, 5vw, 52px); font-weight: 850; letter-spacing: -0.035em; }
+.doc h2 { font-size: 22px; font-weight: 750; margin: 36px 0 8px; }
+.doc p { color: var(--muted); font-size: 17px; }
+.doc-updated { font-size: 15px; }
+.doc-callout { margin: 32px 0 8px; padding: 24px 26px; border-radius: 18px; background: linear-gradient(160deg, #fff8e1, #fde7a6); border: 1px solid #f1d27a; }
+.doc-callout h2 { margin-top: 0; color: #2a1a00; }
+.doc-callout p { color: #4a3508; margin: 0; }
