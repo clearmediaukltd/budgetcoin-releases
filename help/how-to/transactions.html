@@ -65,17 +65,34 @@
 <li>Select the entry row at the top of the list (or press ⌘N, Ctrl+N on Windows and Linux). It’s the tinted row marked <strong>+</strong>, with an <strong>Add</strong> button at the end, and it’s always there, ready for the next transaction.</li>
 <li>Fill it in, using <strong>Tab</strong> to move between fields:
 <ul>
-<li><strong>Date</strong>: type the digits in your budget’s date format, or choose the calendar button (Alt+↓). ↑/↓ move a day (see <a href="../reference/entering-dates.html">Entering dates</a>).</li>
-<li><strong>Payee</strong>: who you paid or who paid you. Payees you’ve used before are suggested as you type, and picking one fills in the category you used last time (see <a href="payees.html">Managing payees</a>).</li>
-<li><strong>Category</strong>: which envelope the money comes from. For money coming in, choose one of the <em>Income</em> options so you can assign it on the budget:
+<li>
+<p><strong>Date</strong>: type the digits in your budget’s date format, or choose the calendar button (Alt+↓). ↑/↓ move a day (see <a href="../reference/entering-dates.html">Entering dates</a>).</p>
+</li>
+<li>
+<p><strong>Payee</strong>: who you paid or who paid you. Type the start of a payee you’ve used before and press <strong>Tab</strong> to complete it:</p>
+<ul>
+<li>If only one payee starts that way, <strong>Tab</strong> fills in the whole name and moves to the next field.</li>
+<li>If several do, <strong>Tab</strong> fills in the part they all share and lists them under the box. Type more letters, or click a name in the list. Press <strong>Tab</strong> again to keep what you typed and move on.</li>
+<li>If none do, <strong>Tab</strong> moves on and the name is added as a new payee.</li>
+</ul>
+<p><strong>Esc</strong> closes the list. A known payee fills in the category you used last time (see <a href="payees.html">Managing payees</a>).</p>
+</li>
+<li>
+<p><strong>Category</strong>: which envelope the money comes from. Each category in the list shows what’s available in it this month, for example <em>Groceries (£42.10)</em>. For money coming in, choose one of the <em>Income</em> options so you can assign it on the budget:</p>
 <ul>
 <li><strong>Income for this month</strong> adds it to this month’s <strong>Ready to Assign</strong> straight away.</li>
 <li><strong>Income for next month</strong> holds it back until next month. Use it to live on last month’s income: pay that arrives late in November is budgeted in December, so you can fill December’s categories as soon as it lands without it showing up as unassigned money in November.</li>
 </ul>
 </li>
-<li><strong>Memo</strong> (optional).</li>
-<li><strong>Outflow</strong> for money leaving the account, or <strong>Inflow</strong> for money coming in. Sums work (see <a href="../reference/amount-maths.html">Typing amounts and sums</a>).</li>
-<li><strong>Cleared</strong>: select the round button if the transaction has already shown up on your bank statement.</li>
+<li>
+<p><strong>Memo</strong> (optional). A long memo opens into a taller box while you type, so you can read all of it. It’s still one line: <strong>Enter</strong> saves the transaction.</p>
+</li>
+<li>
+<p><strong>Outflow</strong> for money leaving the account, or <strong>Inflow</strong> for money coming in. Sums work (see <a href="../reference/amount-maths.html">Typing amounts and sums</a>).</p>
+</li>
+<li>
+<p><strong>Cleared</strong>: select the round button if the transaction has already shown up on your bank statement.</p>
+</li>
 </ul>
 </li>
 <li>Press <strong>Enter</strong> (from any field, including the Category list) or choose <strong>Add</strong>.</li>
@@ -93,6 +110,7 @@
 <h2 id="edit-delete-and-clear"><a class="header" href="#edit-delete-and-clear">Edit, delete and clear</a></h2>
 <ul>
 <li><strong>Edit a transaction where it is</strong>: select its row (or move to it with <strong>↑</strong> and <strong>↓</strong> and press <strong>Enter</strong>). The row’s fields become editable. Press <strong>Enter</strong> or choose <strong>Save</strong> to save, or <strong>Esc</strong> to cancel. Clicking anywhere else, including another transaction, also saves your changes. If something’s missing, the row stays open and says what.</li>
+<li><strong>Read a long memo</strong>: a memo too long for its column ends in “…”. Point at it, or move to its row with <strong>↑</strong> and <strong>↓</strong>, to see all of it.</li>
 <li><strong>Delete</strong> removes it. Use <strong>Undo</strong> if you change your mind. If the transaction is reconciled (or it’s a transfer whose other side is), the app asks first, because deleting it means the account no longer agrees with your bank statement. This applies to <strong>Delete</strong> on selected transactions too.</li>
 <li>The round button marks a transaction <strong>Cleared</strong> (it shows <strong>C</strong>) or not cleared. Reconciled transactions show <strong>R</strong> (see <a href="reconcile.html">Reconciling an account</a>).</li>
 </ul>
